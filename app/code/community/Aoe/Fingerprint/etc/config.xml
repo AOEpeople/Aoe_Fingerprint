@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Aoe_Fingerprint extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Aoe
+ * @package        Aoe_Fingerprint
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Aoe_Fingerprint>
+            <version>1.0.0</version>
+        </Aoe_Fingerprint>
+    </modules>
+    <global>
+        <resources>
+            <aoe_fingerprint_setup>
+                <setup>
+                    <module>Aoe_Fingerprint</module>
+                    <class>Aoe_Fingerprint_Model_Resource_Setup</class>
+                </setup>
+            </aoe_fingerprint_setup>
+        </resources>
+        <blocks>
+            <aoe_fingerprint>
+                <class>Aoe_Fingerprint_Block</class>
+            </aoe_fingerprint>
+        </blocks>
+        <helpers>
+            <aoe_fingerprint>
+                <class>Aoe_Fingerprint_Helper</class>
+            </aoe_fingerprint>
+        </helpers>
+        <models>
+            <aoe_fingerprint>
+                <class>Aoe_Fingerprint_Model</class>
+                <resourceModel>aoe_fingerprint_resource</resourceModel>
+            </aoe_fingerprint>
+            <aoe_fingerprint_resource>
+                <class>Aoe_Fingerprint_Model_Resource</class>
+                <entities>
+                    <fingerprint>
+                        <table>aoe_fingerprint_fingerprint</table>
+                    </fingerprint>
+                </entities>
+            </aoe_fingerprint_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <aoe_fingerprint>
+                    <file>aoe_fingerprint.xml</file>
+                </aoe_fingerprint>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Aoe_Fingerprint>
+                    <files>
+                        <default>Aoe_Fingerprint.csv</default>
+                    </files>
+                </Aoe_Fingerprint>
+            </modules>
+        </translate>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Aoe_Fingerprint before="Mage_Adminhtml">Aoe_Fingerprint_Adminhtml</Aoe_Fingerprint>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

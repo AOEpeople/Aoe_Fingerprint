@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Aoe_Fingerprint extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Aoe
+ * @package        Aoe_Fingerprint
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+--> 
+<layout>
+    <adminhtml_fingerprint_fingerprint_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>system/aoe_fingerprint/fingerprint</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aoe_fingerprint/adminhtml_fingerprint" name="fingerprint" />
+
+        </reference>
+    </adminhtml_fingerprint_fingerprint_index>
+    <adminhtml_fingerprint_fingerprint_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="aoe_fingerprint/adminhtml_fingerprint_grid" name="fingerprint_grid"/>
+        </block>
+    </adminhtml_fingerprint_fingerprint_grid>
+    <!-- Fingerprint add/edit action -->
+    <adminhtml_fingerprint_fingerprint_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>system/aoe_fingerprint/fingerprint</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="aoe_fingerprint/adminhtml_fingerprint_edit" name="fingerprint_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="aoe_fingerprint/adminhtml_fingerprint_edit_tabs" name="fingerprint_tabs"></block>
+        </reference>
+    </adminhtml_fingerprint_fingerprint_edit>
+
+</layout>

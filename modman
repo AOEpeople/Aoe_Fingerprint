@@ -1,0 +1,6 @@
+app/code/community/Aoe/Fingerprint    app/code/community/Aoe/Fingerprint
+app/design/adminhtml/default/default/layout/aoe_fingerprint.xml    app/design/adminhtml/default/default/layout/aoe_fingerprint.xml
+app/design/adminhtml/default/default/template/aoe_fingerprint    app/design/adminhtml/default/default/template/aoe_fingerprint
+app/etc/modules/Aoe_Fingerprint.xml    app/etc/modules/Aoe_Fingerprint.xml
+app/locale/en_US/Aoe_Fingerprint.csv    app/locale/en_US/Aoe_Fingerprint.csv
+shell/*   shell/
